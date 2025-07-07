@@ -1,5 +1,6 @@
 # GARCH
-Symmetric and asymmetric GARCH models to predict return volatility
+Symmetric and asymmetric GARCH models to predict return volatility. The main program is `xgarch_gjr_mean.py`, which
+produced the results in `results_spy_tlt.txt`, discussed below.
 
 ### 1  Which specification is *best* for each asset?
 
