@@ -6,10 +6,10 @@ produced the results in `results_spy_tlt.txt`, discussed below.
 
 | Asset   | Model                  | Log-L         | ΔAIC vs GARCH | ΔBIC vs GARCH | γ (leverage) | *p*-value   | Verdict                                         |
 | ------- | ---------------------- | ------------- | ------------- | ------------- | ------------ | ----------- | ----------------------------------------------- |
-| **SPY** | GARCH(1, 1)            | −7 543.07     | 0             | 0             | —            | —           | ─                                               |
-|         | **GJR-GARCH(1, 1, 1)** | **−7 427.64** | **−228.8**    | **−222.2**    | **+0.237**   | **< 10⁻¹⁸** | **Clearly preferred**                           |
-| **TLT** | **GARCH(1, 1)**        | −7 082.89     | 0             | **0**         | —            | —           | **Preferred (BIC)**                             |
-|         | GJR-GARCH(1, 1, 1)     | −7 081.41     | −1.0          | +5.7          | −0.013       | 0.093       | Tie on AIC; penalised by BIC; γ not significant |
+| **SPY** | GARCH(1, 1)            | −7543.07      | 0             | 0             | —            | —           | ─                                               |
+|         | **GJR-GARCH(1, 1, 1)** | **−7427.64**  | **−228.8**    | **−222.2**    | **+0.237**   | **< 10⁻¹⁸** | **Clearly preferred**                           |
+| **TLT** | **GARCH(1, 1)**        | −7082.89      | 0             | **0**         | —            | —           | **Preferred (BIC)**                             |
+|         | GJR-GARCH(1, 1, 1)     | −7081.41      | −1.0          | +5.7          | −0.013       | 0.093       | Tie on AIC; penalised by BIC; γ not significant |
 
 * **SPY:** GJR-GARCH cuts AIC/BIC by ≈ 230 points and has a highly significant leverage term → it is the clear winner.
 * **TLT:** The GJR version barely improves the likelihood; with the extra parameter, BIC worsens and γ is insignificant → stick with vanilla GARCH.
