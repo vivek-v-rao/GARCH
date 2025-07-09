@@ -171,3 +171,16 @@ def vol_bin_stats(returns: pd.Series, cond_vol: pd.Series,
             "max": mx
         })
     return pd.DataFrame(stats_list)
+
+def series_stats(x: pd.Series) -> dict[str, float]:
+    """Return basic statistics for a pandas Series."""
+    return {
+        "mean":     x.mean(),
+        "sd":       x.std(ddof=0),
+        "min":      x.min(),
+        "max":      x.max(),
+        "skew":     x.skew(),
+        "kurtosis": x.kurt(),   # excess kurtosis
+        "first":    x.iloc[0],
+        "last":     x.iloc[-1],
+    }
