@@ -29,3 +29,12 @@ produced the results in `results_spy_tlt.txt`, discussed below.
 * **SPY:** Use a leverage-sensitive model (e.g., GJR-GARCH) for risk management and option pricing.  
 * **TLT:** Plain GARCH(1, 1) is sufficient; asymmetry adds little value.  
 * **Portfolio risk:** Equity tails are far fatter and more asymmetric than Treasury tails—allocate risk accordingly.
+
+A volatility model with asymmetry, such as GJR-GARCH, is needed to
+capture the fact that conditional volatility can rise after big
+positive returns. On April 9, the S&P 500 rose 9.5% and VIX fell from
+52 to 34. The trailing historical volatility jumped that day because
+of the huge return. . In the daily_vol_forecasts.csv file you can see
+that the GJR-GARCH model fit to SPY predicted a small drop in realized
+vol at the close of April 9 vs. April 8, while a symmetric GARCH model
+predicted a big increase, the opposite of VIX's behavior.
