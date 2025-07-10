@@ -53,7 +53,8 @@ def print_stats_table(row_raw: tuple,
     print()
 
 def plot_norm_kde(series, gmm=None, title=
-    "Densities of normalised returns", log_ratio=False, eps=1e-12):
+    "Densities of normalised returns", log_ratio=False, eps=1e-12,
+    title_prefix=None):
     """ Plot KDE of the data, a fitted 2-component mixture (if given),
     a standard-normal PDF, and (when available) a fitted skew‑t PDF.
     With log_ratio=True a second panel shows log-ratios versus KDE.
@@ -93,7 +94,8 @@ def plot_norm_kde(series, gmm=None, title=
         except Exception:
             dens_skewt = None  # silently skip on failure
 
-    ax.set_title(title)
+    full_title = title if not title_prefix else title_prefix + title
+    ax.set_title(full_title)
     ax.set_ylabel("density")
     ax.legend()
     ax.grid(alpha=0.3)
